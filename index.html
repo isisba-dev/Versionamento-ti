@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Conversor Universal de Unidades — Grupo 6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <header>
+      <div>
+        <h1>Conversor Universal de Unidades</h1>
+        <p class="muted">Grupo 6 — Ísis Lacerda, João Pedro, Eduarda Cardoso</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div> 
+        <div class="controls">
+          <div>
+            <label for="categoria">Categoria</label>
+            <select id="categoria">
+              <option value="distância">Distância</option>
+              <option value="peso">Peso</option>
+              <option value="temperatura">Temperatura</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="valor1">Valor 1</label>
+              <input id="valor1" type="number" step="any" value="2">
+            </div>
+            <div class="col">
+              <label for="unidade1">Unidade 1</label>
+              <select id="unidade1"></select>
+            </div>
+          </div>
+
+          <div id="blocoValor2">
+            <div class="row">
+              <div class="col">
+                <label for="valor2">Valor 2 (opcional)</label>
+                <input id="valor2" type="number" step="any" placeholder="Deixe vazio se não usar">
+              </div>
+              <div class="col">
+                <label for="unidade2">Unidade 2</label>
+                <select id="unidade2"></select>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label for="destino">Unidade destino</label>
+            <select id="destino"></select>
+          </div>
+
+          <div class="actions">
+            <button id="btnConverter" class="primary">Converter</button>
+            <button id="btnExemplo" class="ghost" title="Carrega o exemplo que havia no script">Carregar exemplo</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Abas -->
+        <div class="tabs">
+          <button class="tab active" data-tab="saida">Resultado</button>
+          <button class="tab" data-tab="historico">Histórico</button>
+        </div>
+
+        <!-- Conteúdo das abas -->
+        <div class="tabcontent" id="saida">
+          <div class="preview" id="saidaTexto">Resultado aparecerá aqui.</div>
+        </div>
+
+        <div class="tabcontent" id="historico" style="display:none;">
+          <div class="preview" id="historiaLista">Nenhuma conversão ainda.</div>
+        </div>
+
+        <footer>
+          <div class="note">Observação: lógica do script original mantida.</div>
+          <div class="note">Versão web</div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
